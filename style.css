@@ -36,12 +36,14 @@ body {
   font-size: 1.6rem;
   /*background: color image repeat position/size*/
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 #container {
-  width: 36rem;
-  margin: 5.6rem auto 0;
-  padding: o 2.4rem;
+  width: 100%;
+  max-width: 58.8rem;
+  margin: 5.6rem auto 0; 
+  padding: 2.4rem;
 }
 
 /*profile*/
@@ -65,7 +67,7 @@ body {
 #switch {
   position: relative;
   width: 6.4rem;
-  margin: .4rem auto;
+  margin: 0.4rem auto;
 }
 
 #switch button {
@@ -77,7 +79,7 @@ body {
   position: absolute;
   z-index: 1;
   top: 50%;
- left: 0;
+  left: 0;
   transform: translateY(-50%);
 }
 
@@ -154,3 +156,32 @@ footer {
   font-size: 1.4rem;
 }
 
+/* media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/* animation */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
