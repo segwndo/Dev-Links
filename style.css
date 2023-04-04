@@ -42,7 +42,7 @@ body {
 #container {
   width: 100%;
   max-width: 58.8rem;
-  margin: 5.6rem auto 0; 
+  margin: 5.6rem auto 0;
   padding: 2.4rem;
 }
 
@@ -81,11 +81,15 @@ body {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+  animation: slide-back 0.2s;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.2s forwards;
+}
+
+#switch button:hover{
+  outline: .8rem solid var(--highlight-color);
 }
 
 #switch span {
